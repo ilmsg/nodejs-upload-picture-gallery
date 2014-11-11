@@ -1,0 +1,68 @@
+<% include ../layout/header.html %>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="row">
+				
+				<div class="col-xs-6 col-md-3">
+					<div class="row">
+						<% pictures.forEach(function(picture, index){ %>
+							<% if( (index+1) % 4 == 1 ){ %>
+								<div class="col-md-12">
+									<a href="#" class="thumbnail">
+										<img src="/upload/<%= picture %>" alt="">
+									</a>
+								</div>
+							<% } %>
+						<% }); %>
+					</div>
+				</div>
+				
+				<div class="col-xs-6 col-md-3">
+					<div class="row">
+						<% pictures.forEach(function(picture, index){ %>
+							<% if( (index+1) % 4 == 2 ){ %>
+								<div class="col-md-12">
+									<a href="#" class="thumbnail">
+										<img src="/upload/<%= picture %>" alt="">
+									</a>
+								</div>
+							<% } %>
+						<% }); %>
+					</div>
+				</div>
+				
+				<div class="col-xs-6 col-md-3">
+					<div class="row">
+						<% pictures.forEach(function(picture, index){ %>
+							<% if( (index+1) % 4 == 3 ){ %>
+								<div class="col-md-12">
+									<a href="#" class="thumbnail">
+										<img src="/upload/<%= picture %>" alt="">
+									</a>
+								</div>
+							<% } %>
+						<% }); %>
+					</div>
+				</div>
+				
+				<div class="col-xs-6 col-md-3">
+					<div class="row">
+						<% pictures.forEach(function(picture, index){ %>
+							<% if( (index+1) % 4 == 0 ){ %>
+								<div class="col-md-12">
+									<a href="#" class="thumbnail">
+										<img src="/upload/<%= picture %>" alt="">
+									</a>
+								</div>
+							<% } %>
+						<% }); %>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+</div>
+<% include ../layout/footer.html %>
