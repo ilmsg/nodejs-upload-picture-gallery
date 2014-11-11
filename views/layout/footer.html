@@ -1,0 +1,28 @@
+        <div class="footer">
+            <div class="container">
+                <p class="text-muted">Powered By <a href="http://nodejs.org/">Node.js</a>, <a href="http://mongodb.org">MongoDB</a></p>
+            </div>
+        </div>
+		
+		<script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+		<script src="/js/jquery.uploadify.min.js"></script>
+		<script>
+			$(function () {
+				'use strict';
+				$('#file_upload').uploadify({
+					'auto'     : true,
+					'swf'      : '/swf/uploadify.swf',
+					'uploader' : location.protocol + '//' + location.hostname + ':' + location.port + '/upload',
+					'onQueueComplete' : function(uploads) {
+						console.log(uploads.successful + ' files were uploaded successfully.');
+					},
+					'onUploadComplete' : function(file, data) {
+						console.log('The file ' + file.name + ' uploaded successfully.');
+					}
+				});
+			});
+		</script>
+
+	</body>
+</html>
