@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-var fs = require('fs');
-var util = require('util');
-var formidable = require('formidable');
+const fs = require('fs');
+const util = require('util');
+const formidable = require('formidable');
 
 router.get('/', function(req, res) {
 	fs.readdir( 'public/upload', function( err, pictures ){
@@ -29,7 +29,7 @@ router.get('/gallery', function(req, res) {
 });
 
 router.post('/upload', function (req, res){
-	var form = new formidable.IncomingForm();
+	const form = new formidable.IncomingForm();
 	form.uploadDir = "public/upload";
 	form.keepExtensions = true;
 	
